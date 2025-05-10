@@ -1,0 +1,168 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+.container{
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-image{
+  width: 20px;
+  height: 20px;
+  
+}
+
+.heading{
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+}
+.sub-heading{
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.todo-display{
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  padding: 10px;
+  box-shadow: 5px 5px 5px rgb(235, 232, 232);
+}
+
+.todo-display-left{
+  display: block  ;
+  width: 270px;
+  float: left;
+}
+
+.todo-actions{
+  display: inline-flex;
+  align-items: center;
+  
+}
+
+.todo-description{
+  color: rgb(193, 187, 187);
+  font-family: 'open sans';
+}
+
+.todo-date{
+  color: rgb(193, 187, 187);
+}
+
+.todo-actions > button{
+  border: none;
+}
+
+input[type="text"]{
+  width: 300px;
+  height: 40px;
+  margin-top: 10px;
+  border: 2px solid rgb(231, 227, 227);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 5px 5px 5px rgb(235, 232, 232);
+ 
+}
+
+textarea{
+  width: 300px;
+  height: 70px;
+  border: 2px solid rgb(231, 227, 227);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 5px 5px 5px rgb(235, 232, 232);
+  margin-top: 10px;
+
+}
+
+.add-todo-button{
+  background-color: #213dc5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 50px;
+  margin-top: 10px;
+}
+
+.todo-item-card{
+  list-style: none;
+  width: 100%;
+  max-width: 600px;
+}
+
+input[type="date"]{
+  width: 300px;
+  height: 30px;
+  margin-top: 10px;
+  border: 2px solid rgb(231, 227, 227);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 5px 5px 5px rgb(235, 232, 232);
+}
+
+.todo-display.todo-done {
+  background-color: #213dc5;
+  color: #fff;
+}
+
+.todo-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+@media (min-width: 768px) {
+  .todo-display {
+    flex-direction: row;
+    align-items: center;
+    
+  }
+
+  .todo-display-left {
+    width: 100%;
+  }
+
+  .todo-actions {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+
+  input[type="text"],
+  textarea,
+  input[type="date"],
+  .add-todo-button {
+    width: 90%;
+  }
+
+  .sub-heading,
+  .heading {
+    text-align: center;
+  }
+  .todo-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .todo-item-card {
+    width: calc(50% - 20px); /* Two items per row with some spacing */
+    margin: 10px;
+  }
+}
